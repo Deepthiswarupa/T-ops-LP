@@ -1,11 +1,11 @@
 import { BrowserRouter } from 'react-router-dom';
-import { LandingPage } from './landing/LandingPage';
+import { NewLandingPage } from './landing/NewLandingPage';
 import './index.css';
 
 function App() {
   return (
     <BrowserRouter>
-      <LandingPage />
+      <NewLandingPage />
     </BrowserRouter>
   );
 }

@@ -14,7 +14,7 @@ import { DashboardShowcaseSection } from "@/components/sections/DashboardShowcas
 
 export function NewLandingPage() {
   return (
-    <div className="min-h-screen bg-brand-950 text-white font-sans antialiased selection:bg-brand-500 selection:text-white overflow-x-hidden">
+    <div className="min-h-screen bg-[#050505] text-slate-300 font-sans antialiased selection:bg-orange-500/30 selection:text-white overflow-x-hidden">
       <Navbar />
       <main className="flex-1">
         <HeroSection />

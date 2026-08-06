@@ -5,36 +5,40 @@ import { motion } from "framer-motion";
 
 export function HeroSection() {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center justify-center min-h-[90vh]">
-      {/* Background gradients */}
-      <div className="absolute inset-0 bg-brand-900/20 -z-10" />
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-800/20 rounded-full blur-3xl opacity-50 translate-x-1/2 -translate-y-1/2 -z-10" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-700/20 rounded-full blur-3xl opacity-50 -translate-x-1/2 translate-y-1/2 -z-10" />
+    <section className="relative bg-[#050505] pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center justify-center min-h-[90vh] z-0">
+      {/* Premium Background Elements */}
+      <motion.div 
+        animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.4, 0.3] }} 
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-orange-900/10 rounded-full blur-[120px] -z-10" 
+      />
 
-      <div className="max-w-7xl mx-auto px-6 w-full">
+      <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
         <div className="flex flex-col items-center justify-center text-center">
           <motion.div 
-            initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
+            initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
-            className="max-w-4xl flex flex-col items-center"
+            transition={{ duration: 1, type: "spring", bounce: 0.3 }}
+            className="max-w-5xl flex flex-col items-center w-full"
           >
-            {/* Pill removed per request */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 text-balance">
-              One Intelligent Platform to{" "}
-              <br />
-              <span className="text-brand-400">Manage, Engage, and</span>{" "}
-              <span className="text-accent-500">Grow</span>{" "}
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-serif text-slate-100 leading-[1.15] mb-8 tracking-tight w-full">
+              One Intelligent Platform to<br />
+              <span className="whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-orange-300 via-[#e68a6d] to-orange-400">
+                Manage, Engage, and Grow
+              </span><br />
               Your Workforce
             </h1>
-            <p className="text-lg md:text-xl text-slate-400 mb-10 leading-relaxed max-w-2xl">
+            <p className="text-lg md:text-xl text-slate-400 mb-10 leading-relaxed max-w-2xl font-medium">
               TalentOps brings together employee management, attendance, leave, payroll, performance, communication, and workforce operations into one modern cloud platform.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-              <Button size="lg" className="w-full sm:w-auto px-8">Book a Demo</Button>
-              <Button variant="outline" size="lg" className="w-full sm:w-auto px-8">Get Started</Button>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto mt-4">
+              <Button size="lg" className="h-12 md:h-14 px-8 text-base md:text-lg w-full sm:w-auto rounded-full bg-[#d47f63] text-white hover:bg-[#c26243] shadow-[0_0_20px_rgba(212,127,99,0.3)] transition-all duration-300 font-semibold border-0">
+                Book a Demo
+              </Button>
+              <Button variant="outline" size="lg" className="h-12 md:h-14 px-8 text-base md:text-lg w-full sm:w-auto rounded-full border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800/50 bg-transparent transition-all duration-300 font-semibold">
+                Get Started
+              </Button>
             </div>
-            {/* Trust indicators removed per request */}
           </motion.div>
         </div>
       </div>

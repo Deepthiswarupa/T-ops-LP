@@ -10,16 +10,21 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                display: ['var(--font-playfair)'],
+                sans: ['Inter', 'sans-serif'],
+                heading: ['Outfit', 'sans-serif'],
+                display: ['Outfit', 'sans-serif'],
                 elegant: ['var(--font-cormorant)'],
-                body: ['var(--font-inter)'],
+                body: ['Inter', 'sans-serif'],
                 accent: ['var(--font-space)'],
                 redhat: ['var(--font-redhat)'],
                 leckerli: ['var(--font-leckerli)'],
                 satisfy: ['var(--font-satisfy)'],
-                heading: ['var(--font-playfair)'],
             },
             colors: {
+                slate: {
+                    300: '#f1f5f9', // normally 100
+                    400: '#e2e8f0', // normally 200
+                },
                 brand: {
                     50: '#eff6ff',
                     100: '#dbeafe',
@@ -52,6 +57,15 @@ export default {
                 'accent-gold-soft': '#E8D48A',
                 'accent-cyan': '#06B6D4',
                 'accent-indigo': '#4F46E5',
+            },
+            animation: {
+                'gradient': 'gradient 8s linear infinite',
+            },
+            keyframes: {
+                gradient: {
+                    '0%, 100%': { backgroundPosition: '0% 50%' },
+                    '50%': { backgroundPosition: '100% 50%' },
+                },
             },
         },
     },

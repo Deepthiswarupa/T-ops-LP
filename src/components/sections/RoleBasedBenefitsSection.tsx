@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
-import { UserCircle, Briefcase, Users } from "lucide-react";
+import { UserCircle, Briefcase, Users, CheckCircle2 } from "lucide-react";
 
 export function RoleBasedBenefitsSection() {
   const roles = [
@@ -9,87 +8,98 @@ export function RoleBasedBenefitsSection() {
       id: "employees",
       icon: UserCircle,
       title: "For Employees",
-      color: "text-emerald-400 bg-emerald-900/20",
-      borderColor: "border-emerald-500/50",
-      dotColor: "bg-emerald-500",
+      iconColor: "text-blue-600 bg-white border border-blue-100",
+      titleColor: "text-blue-950",
+      checkColor: "text-blue-500",
+      cardBg: "bg-[#F0F4FF]",
+      gradientOverlay: "from-[#F0F4FF] to-transparent",
       features: [
         "Self-service portal",
         "Attendance tracking",
         "Leave requests",
-        "Payslip access",
+        "Payslips",
         "Company policies",
-        "Internal communication",
-        "Personal profile management"
-      ]
+        "Communication"
+      ],
+      image: "/images/employee_phone.png"
     },
     {
       id: "hr",
       icon: Briefcase,
-      title: "For HR Teams",
-      color: "text-purple-400 bg-purple-900/20",
-      borderColor: "border-purple-500/50",
-      dotColor: "bg-purple-500",
+      title: "For HR",
+      iconColor: "text-purple-600 bg-white border border-purple-100",
+      titleColor: "text-purple-950",
+      checkColor: "text-purple-500",
+      cardBg: "bg-[#F7F4FF]",
+      gradientOverlay: "from-[#F7F4FF] to-transparent",
       features: [
         "Employee administration",
         "Attendance monitoring",
         "Leave approvals",
         "Payroll management",
-        "Workforce reporting",
-        "Compliance support",
-        "Organization management"
-      ]
+        "Workforce reporting"
+      ],
+      image: "/images/hr_laptop.png"
     },
     {
       id: "managers",
       icon: Users,
       title: "For Managers",
-      color: "text-amber-400 bg-amber-900/20",
-      borderColor: "border-amber-500/50",
-      dotColor: "bg-amber-500",
+      iconColor: "text-emerald-600 bg-white border border-emerald-100",
+      titleColor: "text-emerald-950",
+      checkColor: "text-emerald-500",
+      cardBg: "bg-[#F2FAF5]",
+      gradientOverlay: "from-[#F2FAF5] to-transparent",
       features: [
         "Team visibility",
         "Performance reviews",
         "Attendance insights",
-        "Team collaboration",
-        "Organizational communication",
-        "Workforce planning"
-      ]
+        "Organizational collaboration"
+      ],
+      image: "/images/manager_tablet.png"
     }
   ];
 
   return (
-    <section className="py-24 bg-[#0a0a0a]" id="solutions">
+    <section id="company" className="py-24 bg-white relative border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold font-serif text-slate-100 mb-6">How TalentOps Helps</h2>
-          <p className="text-lg text-slate-400 font-medium">
-            A unified platform that delivers value to everyone in your organization, tailored to their specific needs.
-          </p>
+        <div className="mb-12">
+          <div className="text-blue-600 font-semibold tracking-wider text-lg uppercase mb-3">HOW TALENTOPS HELPS</div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {roles.map((role, i) => (
-            <motion.div
+        <div className="grid md:grid-cols-3 gap-6">
+          {roles.map((role) => (
+            <div
               key={role.id}
-              initial={{ opacity: 0, y: 40, scale: 0.95, filter: "blur(10px)" }}
-              whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.7, delay: i * 0.15, type: "spring", bounce: 0.4 }}
-              className={`bg-[#111] rounded-3xl p-8 shadow-xl border ${role.borderColor} hover:-translate-y-2 transition-transform duration-300`}
+              className={`rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-row hover:shadow-md transition-shadow relative ${role.cardBg}`}
             >
-              <div className={`w-14 h-14 rounded-xl ${role.color} flex items-center justify-center mb-6`}>
-                <role.icon className="w-7 h-7" strokeWidth={1.5} />
+              <div className="p-6 relative z-10 w-[55%] lg:w-[60%]">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className={`p-2 rounded-lg shadow-sm ${role.iconColor}`}>
+                    <role.icon className="w-5 h-5" />
+                  </div>
+                  <h3 className={`text-[17px] font-bold ${role.titleColor}`}>{role.title}</h3>
+                </div>
+                
+                <ul className="space-y-3">
+                  {role.features.map((feature, j) => (
+                    <li key={j} className="flex items-center gap-2.5 text-slate-700 text-[13px] font-medium leading-tight">
+                      <CheckCircle2 className={`w-4 h-4 shrink-0 ${role.checkColor}`} />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-2xl font-bold text-slate-200 mb-6">{role.title}</h3>
-              <ul className="space-y-4">
-                {role.features.map((feature, j) => (
-                  <li key={j} className="flex items-center gap-3 text-slate-400 font-medium">
-                    <div className={`w-1.5 h-1.5 rounded-full ${role.dotColor}`} />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+              
+              <div className="absolute right-0 top-0 bottom-0 w-[60%] lg:w-[50%] z-0 pointer-events-none">
+                <div className={`absolute inset-y-0 left-0 w-2/5 bg-gradient-to-r ${role.gradientOverlay} z-10`} />
+                <img 
+                  src={role.image} 
+                  alt={role.title} 
+                  className="w-full h-full object-cover object-center relative z-0 mix-blend-multiply"
+                />
+              </div>
+            </div>
           ))}
         </div>
       </div>

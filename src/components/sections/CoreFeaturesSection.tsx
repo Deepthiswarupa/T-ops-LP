@@ -1,91 +1,72 @@
 "use client";
 import React from "react";
 import { 
-  Users, CalendarClock, PlaneTakeoff, CircleDollarSign, 
-  Target, Network, MessageSquare, CalendarDays, 
-  LifeBuoy, BarChart3, Shield 
+  Users, Clock, CalendarDays, Wallet, 
+  Target, Network, MessageSquare, Calendar, 
+  Headset, BarChart4, ShieldCheck, ArrowRight 
 } from "lucide-react";
-import { motion } from "framer-motion";
 
 export function CoreFeaturesSection() {
   const features = [
-    { icon: Users, title: "Employee Management", desc: "Digital employee records, documents, and assets.", color: "text-emerald-400 bg-emerald-900/20 group-hover:bg-emerald-500" },
-    { icon: CalendarClock, title: "Attendance & Timecards", desc: "Automated tracking, shifts, and biometric integrations.", color: "text-purple-400 bg-purple-900/20 group-hover:bg-purple-500" },
-    { icon: PlaneTakeoff, title: "Leave Management", desc: "Custom policies, approval workflows, and balances.", color: "text-amber-400 bg-amber-900/20 group-hover:bg-amber-500" },
-    { icon: CircleDollarSign, title: "Payroll & Payslips", desc: "Automated calculations, taxes, and self-serve payslips.", color: "text-blue-400 bg-blue-900/20 group-hover:bg-blue-500" },
-    { icon: Target, title: "Performance Reviews", desc: "Goals, 360 feedback, and continuous appraisals.", color: "text-rose-400 bg-rose-900/20 group-hover:bg-rose-500" },
-    { icon: Network, title: "Organization Hierarchy", desc: "Dynamic org charts and reporting lines.", color: "text-cyan-400 bg-cyan-900/20 group-hover:bg-cyan-500" },
-    { icon: MessageSquare, title: "Internal Messaging", desc: "Team announcements and direct communication.", color: "text-indigo-400 bg-indigo-900/20 group-hover:bg-indigo-500" },
-    { icon: CalendarDays, title: "Calendar & Events", desc: "Holidays, work anniversaries, and company events.", color: "text-emerald-400 bg-emerald-900/20 group-hover:bg-emerald-500" },
-    { icon: LifeBuoy, title: "Helpdesk", desc: "Internal ticketing system for HR requests.", color: "text-orange-400 bg-orange-900/20 group-hover:bg-orange-500" },
-    { icon: BarChart3, title: "Reports & Analytics", desc: "Deep insights into headcount, turnover, and costs.", color: "text-purple-400 bg-purple-900/20 group-hover:bg-purple-500" },
-    { icon: Shield, title: "Security & Roles", desc: "Granular access controls and data encryption.", color: "text-blue-400 bg-blue-900/20 group-hover:bg-blue-500" },
+    { icon: Users, title: "Employee\nManagement", bg: "bg-blue-50", text: "text-blue-600", border: "border-blue-200", hoverBg: "group-hover:bg-blue-600", shadow: "group-hover:shadow-blue-500/30", hoverText: "group-hover:text-blue-600" },
+    { icon: Clock, title: "Attendance &\nTimecards", bg: "bg-purple-50", text: "text-purple-600", border: "border-purple-200", hoverBg: "group-hover:bg-purple-600", shadow: "group-hover:shadow-purple-500/30", hoverText: "group-hover:text-purple-600" },
+    { icon: CalendarDays, title: "Leave\nManagement", bg: "bg-emerald-50", text: "text-emerald-600", border: "border-emerald-200", hoverBg: "group-hover:bg-emerald-600", shadow: "group-hover:shadow-emerald-500/30", hoverText: "group-hover:text-emerald-600" },
+    { icon: Wallet, title: "Payroll &\nPayslips", bg: "bg-amber-50", text: "text-amber-600", border: "border-amber-200", hoverBg: "group-hover:bg-amber-600", shadow: "group-hover:shadow-amber-500/30", hoverText: "group-hover:text-amber-600" },
+    { icon: Target, title: "Performance\nReviews", bg: "bg-rose-50", text: "text-rose-600", border: "border-rose-200", hoverBg: "group-hover:bg-rose-600", shadow: "group-hover:shadow-rose-500/30", hoverText: "group-hover:text-rose-600" },
+    { icon: Network, title: "Organization\nHierarchy", bg: "bg-cyan-50", text: "text-cyan-600", border: "border-cyan-200", hoverBg: "group-hover:bg-cyan-600", shadow: "group-hover:shadow-cyan-500/30", hoverText: "group-hover:text-cyan-600" },
+    { icon: MessageSquare, title: "Internal\nMessaging", bg: "bg-indigo-50", text: "text-indigo-600", border: "border-indigo-200", hoverBg: "group-hover:bg-indigo-600", shadow: "group-hover:shadow-indigo-500/30", hoverText: "group-hover:text-indigo-600" },
+    { icon: Calendar, title: "Calendar &\nEvents", bg: "bg-teal-50", text: "text-teal-600", border: "border-teal-200", hoverBg: "group-hover:bg-teal-600", shadow: "group-hover:shadow-teal-500/30", hoverText: "group-hover:text-teal-600" },
+    { icon: Headset, title: "Helpdesk /\nRaise a Ticket", bg: "bg-fuchsia-50", text: "text-fuchsia-600", border: "border-fuchsia-200", hoverBg: "group-hover:bg-fuchsia-600", shadow: "group-hover:shadow-fuchsia-500/30", hoverText: "group-hover:text-fuchsia-600" },
+    { icon: BarChart4, title: "Reports &\nAnalytics", bg: "bg-orange-50", text: "text-orange-600", border: "border-orange-200", hoverBg: "group-hover:bg-orange-600", shadow: "group-hover:shadow-orange-500/30", hoverText: "group-hover:text-orange-600" },
+    { icon: ShieldCheck, title: "Role-Based\nAccess & Security", bg: "bg-violet-50", text: "text-violet-600", border: "border-violet-200", hoverBg: "group-hover:bg-violet-600", shadow: "group-hover:shadow-violet-500/30", hoverText: "group-hover:text-violet-600" },
   ];
 
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const item: any = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
-  };
-
   return (
-    <section id="features" className="py-24 bg-[#0a0a0a] relative overflow-hidden text-slate-300 z-0">
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.02] mix-blend-overlay pointer-events-none -z-10" />
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#222_1px,transparent_1px),linear-gradient(to_bottom,#222_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] -z-10" />
+    <section className="pb-16 pt-8 bg-slate-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-5xl mx-auto mb-16">
-          <motion.div 
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-extrabold font-serif mb-6 text-slate-100 tracking-tight leading-tight lg:whitespace-nowrap">
-              Everything You Need. Nothing You Don't.
-            </h2>
-            <p className="text-lg text-slate-400 font-medium leading-relaxed">
-              A complete suite of tools to manage your workforce seamlessly. Explore our comprehensive feature set.
-            </p>
-          </motion.div>
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-blue-600 font-semibold tracking-wider text-lg uppercase">
+            CORE FEATURES
+          </div>
         </div>
+      </div>
 
-        <motion.div 
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          {features.map((feature, i) => (
-            <motion.div 
-              key={i} 
-              variants={item}
-              className="group relative flex items-start gap-4 p-6 rounded-2xl bg-[#111] shadow-lg border border-slate-800 hover:shadow-xl hover:border-slate-700 transition-all duration-300"
-            >
-              <div className={`w-12 h-12 flex-shrink-0 rounded-xl flex items-center justify-center transition-colors duration-300 group-hover:text-white ${feature.color}`}>
-                <feature.icon className="w-6 h-6" strokeWidth={1.5} />
-              </div>
-              
-              <div className="flex flex-col text-left">
-                <h4 className="font-bold text-slate-200 mb-1 leading-snug transition-colors duration-300">
+      {/* Full-width edge-to-edge box */}
+      <div className="bg-white border-y border-slate-200 py-12 shadow-md w-full overflow-hidden pause-marquee relative">
+        
+        {/* Subtle gradient fades for edges */}
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none"></div>
+
+        <div className="flex whitespace-nowrap">
+          {/* First set of items */}
+          <div className="flex gap-16 px-8 animate-marquee min-w-max">
+            {features.map((feature, i) => (
+              <div key={i} className="flex flex-col items-center justify-start group cursor-pointer w-[160px]">
+                <div className={`w-20 h-20 rounded-2xl ${feature.bg} border ${feature.border} shadow-sm flex items-center justify-center mb-5 ${feature.text} ${feature.hoverBg} group-hover:text-white group-hover:border-transparent group-hover:-translate-y-2 group-hover:shadow-lg ${feature.shadow} transition-all duration-300`}>
+                  <feature.icon className="w-8 h-8" strokeWidth={1.5} />
+                </div>
+                <h4 className={`font-semibold text-slate-700 text-[15px] leading-snug text-center ${feature.hoverText} transition-colors whitespace-pre-line`}>
                   {feature.title}
                 </h4>
-                <p className="text-sm text-slate-500 font-medium leading-relaxed">
-                  {feature.desc}
-                </p>
               </div>
-            </motion.div>
-          ))}
-        </motion.div>
+            ))}
+          </div>
+          
+          {/* Second identical set for seamless looping */}
+          <div className="flex gap-16 px-8 animate-marquee min-w-max" aria-hidden="true">
+            {features.map((feature, i) => (
+              <div key={`dup-${i}`} className="flex flex-col items-center justify-start group cursor-pointer w-[160px]">
+                <div className={`w-20 h-20 rounded-2xl ${feature.bg} border ${feature.border} shadow-sm flex items-center justify-center mb-5 ${feature.text} ${feature.hoverBg} group-hover:text-white group-hover:border-transparent group-hover:-translate-y-2 group-hover:shadow-lg ${feature.shadow} transition-all duration-300`}>
+                  <feature.icon className="w-8 h-8" strokeWidth={1.5} />
+                </div>
+                <h4 className={`font-semibold text-slate-700 text-[15px] leading-snug text-center ${feature.hoverText} transition-colors whitespace-pre-line`}>
+                  {feature.title}
+                </h4>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -71,7 +71,7 @@ export function ActionableInsightsSection() {
   ];
 
   return (
-    <section id="pricing" className="py-24 bg-slate-950 relative border-b-[24px] border-white">
+    <section id="pricing" className="py-24 bg-slate-950 relative border-b-[4px] border-white">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-8 relative z-10">
         
         {/* Header */}

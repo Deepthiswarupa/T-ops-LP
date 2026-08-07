@@ -31,7 +31,7 @@ export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-blue-950 border-b border-blue-900">
+    <section className="py-24 bg-blue-950 border-b-[4px] border-white">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
         <div className="text-center mb-16 flex flex-col items-center">
           <motion.div
@@ -40,7 +40,7 @@ export function FAQSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-blue-500 mb-6">
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-blue-100">
@@ -49,10 +49,10 @@ export function FAQSection() {
           </motion.div>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-8">
           {faqs.map((faq, i) => (
-            <motion.div 
-              key={i} 
+            <motion.div
+              key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}

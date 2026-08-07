@@ -6,11 +6,11 @@ import { ArrowRight } from "lucide-react";
 export function FinalCTASection() {
   return (
     <section className="py-24 bg-slate-900 text-center">
-      <div className="max-w-3xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6">
+      <div className="w-full max-w-[1400px] mx-auto px-4 md:px-8">
+        <h2 className="text-5xl md:text-7xl lg:text-[5.5rem] font-display font-bold text-blue-500 mb-8 leading-tight">
           Ready to Transform Your Workforce Operations?
         </h2>
-        <p className="text-slate-300 text-lg mb-10 max-w-2xl mx-auto">
+        <p className="text-slate-300 text-2xl mb-12 max-w-3xl mx-auto">
           Join thousands of companies using TalentOps to build a more efficient, engaged, and productive workforce.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">

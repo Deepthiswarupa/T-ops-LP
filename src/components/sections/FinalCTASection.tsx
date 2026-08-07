@@ -5,15 +5,15 @@ import { ArrowRight } from "lucide-react";
 
 export function FinalCTASection() {
   return (
-    <section className="py-24 bg-slate-900 text-center">
+    <section className="py-24 bg-slate-900 text-left">
       <div className="w-full max-w-[1400px] mx-auto px-4 md:px-8">
         <h2 className="text-5xl md:text-7xl lg:text-[5.5rem] font-display font-bold text-blue-500 mb-8 leading-tight">
           Ready to Transform Your Workforce Operations?
         </h2>
-        <p className="text-slate-300 text-2xl mb-12 max-w-3xl mx-auto">
+        <p className="text-slate-300 text-2xl mb-12 max-w-3xl">
           Join thousands of companies using TalentOps to build a more efficient, engaged, and productive workforce.
         </p>
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <div className="flex flex-col sm:flex-row justify-start items-center gap-4">
           <Button size="lg" className="h-14 w-full sm:w-auto px-8 text-lg font-medium rounded-xl bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-600/20 transition-all hover:-translate-y-0.5 whitespace-nowrap">
             Book a Demo <ArrowRight className="ml-2 w-5 h-5 shrink-0" />
           </Button>

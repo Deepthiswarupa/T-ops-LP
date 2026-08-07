@@ -90,5 +90,11 @@ export default {
             },
         },
     },
+    safelist: [
+        {
+            pattern: /(bg|text|border|shadow)-(blue|sky|emerald|rose|orange|purple)-(300|400|500)/,
+            variants: ['hover', 'group-hover'],
+        }
+    ],
     plugins: [],
 }

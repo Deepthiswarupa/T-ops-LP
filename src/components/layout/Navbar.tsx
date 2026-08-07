@@ -27,7 +27,7 @@ export function Navbar() {
 
   return (
     <header className={cn(
-      "absolute top-0 inset-x-0 z-50 transition-all duration-300 border-b border-transparent bg-white py-4",
+      "fixed top-0 inset-x-0 z-50 transition-all duration-300 border-b border-transparent bg-white py-4",
       isScrolled ? "shadow-sm border-slate-200" : ""
     )}>
       <div className="mx-auto px-6 max-w-7xl">
@@ -42,7 +42,7 @@ export function Navbar() {
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a key={link.name} href={`#${link.name.toLowerCase()}`} className="flex items-center gap-1 text-lg font-medium text-slate-600 hover:text-primary-600 transition-colors">
+              <a key={link.name} href={`#${link.name.toLowerCase()}`} className="flex items-center gap-1 text-lg font-medium text-black hover:text-primary-600 transition-colors">
                 {link.name}
                 {link.hasDropdown && <ChevronDown className="w-5 h-5 text-slate-400" />}
               </a>
@@ -51,8 +51,8 @@ export function Navbar() {
 
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center gap-6">
-            <a href="#login" className="text-lg font-medium text-slate-700 hover:text-primary-600 transition-colors">Log In</a>
-            <Button className="rounded-md bg-primary-600 hover:bg-primary-700 text-white font-medium text-lg px-8 h-12 shadow-sm transition-all whitespace-nowrap">
+            <a href="#login" className="text-lg font-medium text-black hover:text-primary-600 transition-colors">Log In</a>
+            <Button className="rounded-md bg-primary-600 hover:bg-primary-700 text-black font-medium text-lg px-8 h-12 shadow-sm transition-all whitespace-nowrap">
               Book a Demo
             </Button>
           </div>
@@ -77,7 +77,7 @@ export function Navbar() {
         ))}
         <div className="flex flex-col gap-3 mt-2">
           <Button variant="outline" className="w-full justify-center rounded-full text-slate-700 font-medium h-12">Log in</Button>
-          <Button className="w-full justify-center rounded-full bg-primary-600 hover:bg-primary-700 text-white font-medium h-12 shadow-premium">Book a Demo</Button>
+          <Button className="w-full justify-center rounded-full bg-primary-600 hover:bg-primary-700 text-black font-medium h-12 shadow-premium">Book a Demo</Button>
         </div>
       </div>
     </header>

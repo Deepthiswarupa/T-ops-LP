@@ -31,8 +31,8 @@ export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-slate-50 border-b border-slate-100">
-      <div className="max-w-3xl mx-auto px-6">
+    <section className="py-24 bg-blue-950 border-b border-blue-900">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
         <div className="text-center mb-16 flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -40,10 +40,10 @@ export function FAQSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-blue-600 mb-6">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-slate-600">
+            <p className="text-lg text-blue-100">
               Everything you need to know about the product and billing.
             </p>
           </motion.div>
@@ -57,7 +57,7 @@ export function FAQSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+              className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-lg shadow-blue-900/20 hover:shadow-xl transition-shadow"
             >
               <button
                 suppressHydrationWarning

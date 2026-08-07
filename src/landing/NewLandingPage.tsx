@@ -5,10 +5,8 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { TrustedCompaniesSection } from "@/components/sections/TrustedCompaniesSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { WhyTalentOpsSection } from "@/components/sections/WhyTalentOpsSection";
-import { CoreFeaturesSection } from "@/components/sections/CoreFeaturesSection";
 import { DashboardShowcaseSection } from "@/components/sections/DashboardShowcaseSection";
 import { RoleBasedBenefitsSection } from "@/components/sections/RoleBasedBenefitsSection";
-import { BusinessBenefitsSection } from "@/components/sections/BusinessBenefitsSection";
 import { AiAutomationSection } from "@/components/sections/AiAutomationSection";
 import { ContactSalesSection } from "@/components/sections/ContactSalesSection";
 import { ActionableInsightsSection } from "@/components/sections/ActionableInsightsSection";
@@ -23,9 +21,7 @@ export function NewLandingPage() {
         <HeroSection />
         <AboutSection />
         <WhyTalentOpsSection />
-        <CoreFeaturesSection />
         <RoleBasedBenefitsSection />
-        <BusinessBenefitsSection />
         <AiAutomationSection />
         <ActionableInsightsSection />
         <ContactSalesSection />

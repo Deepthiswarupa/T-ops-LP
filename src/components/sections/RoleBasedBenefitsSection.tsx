@@ -62,29 +62,29 @@ export function RoleBasedBenefitsSection() {
 
   return (
     <section id="company" className="py-24 bg-white relative border-b border-slate-100">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-12">
+      <div className="max-w-[1500px] mx-auto px-6">
+        <div className="mb-12 text-center">
           <div className="text-blue-600 font-semibold tracking-wider text-lg uppercase mb-3">HOW TALENTOPS HELPS</div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
           {roles.map((role) => (
             <div
               key={role.id}
               className={`rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-row hover:shadow-md transition-shadow relative ${role.cardBg}`}
             >
-              <div className="p-6 relative z-10 w-[55%] lg:w-[60%]">
+              <div className="p-6 lg:p-8 relative z-10 w-[55%] lg:w-[60%]">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className={`p-2 rounded-lg shadow-sm ${role.iconColor}`}>
-                    <role.icon className="w-5 h-5" />
+                  <div className={`p-2.5 rounded-lg shadow-sm ${role.iconColor}`}>
+                    <role.icon className="w-5 h-5 lg:w-6 lg:h-6" />
                   </div>
-                  <h3 className={`text-[17px] font-bold ${role.titleColor}`}>{role.title}</h3>
+                  <h3 className={`text-[18px] lg:text-[20px] font-bold ${role.titleColor}`}>{role.title}</h3>
                 </div>
                 
-                <ul className="space-y-3">
+                <ul className="space-y-3.5">
                   {role.features.map((feature, j) => (
-                    <li key={j} className="flex items-center gap-2.5 text-slate-700 text-[13px] font-medium leading-tight">
-                      <CheckCircle2 className={`w-4 h-4 shrink-0 ${role.checkColor}`} />
+                    <li key={j} className="flex items-center gap-2.5 text-slate-700 text-[14px] lg:text-[15px] font-medium leading-tight">
+                      <CheckCircle2 className={`w-4 h-4 lg:w-5 lg:h-5 shrink-0 ${role.checkColor}`} />
                       {feature}
                     </li>
                   ))}

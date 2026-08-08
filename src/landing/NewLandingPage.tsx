@@ -11,7 +11,7 @@ import { AiAutomationSection } from "@/components/sections/AiAutomationSection";
 import { ContactSalesSection } from "@/components/sections/ContactSalesSection";
 import { ActionableInsightsSection } from "@/components/sections/ActionableInsightsSection";
 import { FAQSection } from "@/components/sections/FAQSection";
-import { FinalCTASection } from "@/components/sections/FinalCTASection";
+import { VisionSection } from "@/components/sections/VisionSection";
 
 export function NewLandingPage() {
   return (
@@ -26,7 +26,7 @@ export function NewLandingPage() {
         <ActionableInsightsSection />
         <ContactSalesSection />
         <FAQSection />
-        <FinalCTASection />
+        <VisionSection />
       </main>
       <Footer />
     </div>

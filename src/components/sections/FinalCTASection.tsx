@@ -5,21 +5,29 @@ import { ArrowRight } from "lucide-react";
 
 export function FinalCTASection() {
   return (
-    <section className="py-24 bg-slate-900 text-left">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
-        <h2 className="text-5xl md:text-7xl lg:text-[5.5rem] font-display font-bold text-blue-500 mb-8 leading-tight">
-          Ready to Transform Your Workforce Operations?
-        </h2>
-        <p className="text-slate-300 text-2xl mb-12 max-w-3xl">
-          Join thousands of companies using TalentOps to build a more efficient, engaged, and productive workforce.
-        </p>
-        <div className="flex flex-col sm:flex-row justify-start items-center gap-4">
-          <Button size="lg" className="h-14 w-full sm:w-auto px-8 text-lg font-medium rounded-xl bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-600/20 transition-all hover:-translate-y-0.5 whitespace-nowrap">
-            Book a Demo <ArrowRight className="ml-2 w-5 h-5 shrink-0" />
-          </Button>
-          <Button variant="outline" size="lg" className="h-14 w-full sm:w-auto px-8 text-lg font-medium rounded-xl bg-slate-900 text-white border-slate-700 hover:bg-slate-800 transition-all whitespace-nowrap">
-            Start Free Trial
-          </Button>
+    <section className="py-24 md:py-32 bg-white relative overflow-hidden flex flex-col justify-center px-6 lg:px-8">
+      {/* Decorative Blob */}
+      <div className="absolute top-1/2 -right-[20%] md:-right-[10%] lg:-right-40 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full opacity-80 blur-2xl -translate-y-1/2 pointer-events-none" />
+      
+      <div className="max-w-7xl mx-auto w-full relative z-10 grid md:grid-cols-2">
+        <div className="flex flex-col items-start text-left">
+          <h2 className="text-5xl md:text-[4rem] lg:text-[4.5rem] font-display font-bold text-[#111827] mb-6 leading-[1.05] tracking-tight">
+            Ready to <br />
+            Transform <br />
+            Your <span className="text-[#3b82f6]">Workforce</span> <br />
+            Operations?
+          </h2>
+          <p className="text-slate-600 text-lg md:text-xl mb-10 max-w-md leading-relaxed font-medium">
+            Join thousands of companies using TalentOps to build a more efficient, engaged, and productive workforce.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-start items-center gap-4 w-full sm:w-auto">
+            <Button size="lg" className="w-full sm:w-auto h-14 px-8 text-[15px] font-bold rounded-xl bg-[#3b82f6] hover:bg-blue-600 text-white transition-all whitespace-nowrap shadow-md">
+              Book a Demo <ArrowRight strokeWidth={2} className="ml-2 w-4 h-4 shrink-0" />
+            </Button>
+            <Button variant="outline" size="lg" className="w-full sm:w-auto h-14 px-8 text-[15px] font-bold rounded-xl bg-white text-[#3b82f6] border border-[#3b82f6] hover:bg-blue-50 transition-all whitespace-nowrap">
+              Start Free Trial
+            </Button>
+          </div>
         </div>
       </div>
     </section>

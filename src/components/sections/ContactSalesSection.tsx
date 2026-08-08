@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 export function ContactSalesSection() {
   return (
-    <section id="contact" className="relative py-24 bg-blue-950 overflow-hidden text-slate-100 border-b-[4px] border-white">
+    <section id="contact" className="relative py-24 bg-blue-950 overflow-hidden text-slate-100 border-b-[16px] border-white">
       {/* Subtle dotted background pattern */}
       <div 
         className="absolute inset-0 z-0 opacity-20"
@@ -72,7 +72,7 @@ export function ContactSalesSection() {
 
             <button 
               type="submit"
-              className="mt-2 w-full h-12 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-[15px] shadow-lg shadow-blue-600/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
+              className="mt-2 w-full h-12 rounded-xl bg-blue-600 hover:bg-blue-700 text-black font-bold text-[15px] shadow-lg shadow-blue-600/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
             >
               Send Request
               <ArrowRight className="w-5 h-5" />

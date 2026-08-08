@@ -165,7 +165,7 @@ export function WhyTalentOpsSection() {
                     {feature.title}
                   </h3>
                   <div className={`absolute bottom-8 flex items-center gap-2 text-xs font-bold tracking-widest uppercase ${feature.iconColorDark}`}>
-                    CLICK TO OPEN <ArrowRight className="w-3 h-3" />
+                    HOVER TO OPEN <ArrowRight className="w-3 h-3" />
                   </div>
                 </div>
 
